@@ -42,12 +42,12 @@
         name: vim
         state: present
 
-    - name: Set git author name using command while we're at it.
+    - name: Set git author name using command if provided
       ansible.builtin.command:
         command: git config --global user.name "{{ git_author_user_name }}"
       when: git_author_user_name != ""
 
-    - name: Set git author email using command too.
+    - name: Set git author email using command if provided
       ansible.builtin.command:
-        command: "git config --global user.email '{{ git_author_email }}'"
+        command: git config --global user.name "{{ git_author_email }}"
       when: git_author_email != ""
