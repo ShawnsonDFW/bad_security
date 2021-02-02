@@ -8,3 +8,9 @@ https://docs.ansible.com/ansible/latest/collections/ansible/builtin/file_module.
 
 
 
+Install collection:
+
+https://docs.ansible.com/ansible/latest/collections/community/general/git_config_module.html
+
+
+
