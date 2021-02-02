@@ -1,11 +1,6 @@
 - hosts: all
   become: yes
 
-  vars:
-    #Add your details below in quotes.
-    git_author_user_name: "Shawn Porter"
-    git_author_email: "my@email.com"
-  
   tasks:
     - name: Copy a .ssh config file to disable ssh known host checking
       ansible.builtin.copy:
@@ -41,11 +36,3 @@
       ansible.builtin.yum:
         name: vim
         state: present
-
-    - name: Set git author name using command if provided
-      ansible.builtin.shell: git config --global user.name {{ git_author_user_name }}
-      when: git_author_user_name != "" and git_author_user_name != None
-
-    - name: Set git author email using command if provided
-      ansible.builtin.shell: git config --global user.name {{ git_author_email }}
-      when: git_author_email != "" and git_author_email != None

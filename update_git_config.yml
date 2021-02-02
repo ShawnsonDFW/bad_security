@@ -1,0 +1,27 @@
+- hosts: all
+  become: yes
+
+  vars:
+    #Add your details below in quotes.
+    git_author_user_name: "Shawn Porter"
+    git_author_email: "my@email.com"
+  
+  tasks:
+    - name: Set git author name using external module
+      community.general.git_config:
+        name: user.name
+        scope: global
+        value: {{ git_author_user_name }}
+      when: git_author_user_name != "" and git_author_user_name != None
+
+
+    - name: Set git author name using external module
+      community.general.git_config:
+        name: user.name
+        scope: global
+        value: {{ git_author_email }}
+      when: git_author_email != "" and git_author_email != None
+
+    - name: Set git author email using external module
+      ansible.builtin.shell: git config --global user.name {{ git_author_email }}
+      when: git_author_email != "" and git_author_email != None
