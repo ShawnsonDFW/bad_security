@@ -45,10 +45,10 @@
     - name: Set git author name using command while we're at it.
       ansible.builtin.command:
         command: git config --global user.name "{{ git_author_username }}"
-      when: {{ git_author_username }} is defined
+      when: git_author_username defined
 
     - name: Set git author email using command module too.
       ansible.builtin.command:
         command: git config --global user.email "{{ git_author_email }}"
-      when: {{ git_author_email }} is defined
+      when: git_author_email is defined
 
