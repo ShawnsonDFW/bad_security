@@ -1,0 +1,8 @@
+- hosts: all
+
+  tasks:
+    - name: Copy a .ssh config file to disable ssh known host checking
+      ansible.builtin.copy:
+        src: config
+        dest: /root/.ssh/config
+
