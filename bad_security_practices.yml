@@ -30,5 +30,7 @@
         msg:
         - "Are you really going to make it easy to run VSCode as SUPER USER!!?"
         - "This is just irresponsible.  Don't share this code."
+        - "You created a dir that was already in path vs adding a new dir to path?  Working hard to be lazy."
 
+        
 
