@@ -32,5 +32,9 @@
         - "This is just irresponsible.  Don't share this code."
         - "You created a dir that was already in path vs adding a new dir to path?  Working hard to be lazy."
 
+    - name: Might as well install VIM.
+      ansible.builtin.yum:
+        name: vim
+        state: present
         
 
