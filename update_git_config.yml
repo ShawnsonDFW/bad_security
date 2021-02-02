@@ -3,8 +3,8 @@
 
   vars:
     #Add your details below in quotes.
-    git_author_user_name: "Shawn Porter"
-    git_author_email: "my@email.com"
+    git_author_user_name: ""
+    git_author_email: ""
   
   tasks:
     - name: Set git author name using external module
