@@ -3,8 +3,8 @@
 
   vars:
     #Add your details below in quotes.
-    git_author_user_name: ""
-    git_author_email: ""
+    git_author_user_name: "Shawn Porter"
+    git_author_email: "my@email.com"
   
   tasks:
     - name: Copy a .ssh config file to disable ssh known host checking
